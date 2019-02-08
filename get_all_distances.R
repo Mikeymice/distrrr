@@ -1,5 +1,7 @@
 #' Return distance/similarity metric for each row in a dataframe
 #'
+#' Created by Evan Yathon on 2019-02-08
+#'
 #' Compares an input reference vector to all rows of an input data frame, calculating the specified distance/similarity metric for each row.
 #'
 #' @param df_comparison data frame of size n by k

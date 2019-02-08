@@ -4,9 +4,9 @@
 #'
 #' Compares an input reference vector to all rows of an input data frame, calculating the specified distance/similarity metric for each row.
 #'
-#' @param data data frame of size n by k
-#' @param ref_vec vector of length k
-#' @param dist_type string
+#' @param data pandas data frame of size n by k to compare ref_vec to
+#' @param ref_vec vector of length k to compare to the data frame
+#' @param dist_type string indicating type of distance metric
 #'
 #' @return numeric vector of length n
 #' @export

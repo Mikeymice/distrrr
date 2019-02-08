@@ -6,14 +6,13 @@
 #' @param ref_vec vector of length k
 #' @param dist_type string
 #'
-#' @return nmueric vector of length n
+#' @return numeric vector of length n
 #' @export
 #'
 #' @examples
 #'
 
 get_all_distances <- function(df_comparison, ref_vec, dist_type = "euclidean"){
-
 
       return(as.numeric(c()))
 }

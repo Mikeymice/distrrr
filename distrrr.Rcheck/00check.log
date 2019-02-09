@@ -1,0 +1,67 @@
+* using log directory 'C:/Users/evany/Documents/UBC_MDS/524_DSCI/distrrr/distrrr.Rcheck'
+* using R version 3.5.2 (2018-12-20)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* using options '--no-manual --as-cran'
+* checking for file 'distrrr/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'distrrr' version '0.1.0'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'distrrr' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  'filter_distances' 'get_all_distances' 'get_closest' 'get_distance'
+All user-level objects in a package should have documentation entries.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking examples ... NONE
+* checking for unstated dependencies in 'tests' ... OK
+* checking tests ... ERROR
+  Running 'testthat.R'
+Running the tests in 'tests/testthat.R' failed.
+Last 13 lines of output:
+  == testthat results  =======================
+  OK: 1 SKIPPED: 0 FAILED: 29
+  1. Failure: Output should be a vector containing numerics (@test_filter_distances.R#15) 
+  2. Failure: Output vector is the same length of the number of rows of input data frame (@test_get_all_distances.R#11) 
+  3. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#30) 
+  4. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#33) 
+  5. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#36) 
+  6. Failure: First argument should be a data frame (@test_get_all_distances.R#42) 
+  7. Failure: First argument should be a data frame (@test_get_all_distances.R#43) 
+  8. Failure: First argument should be a data frame (@test_get_all_distances.R#44) 
+  9. Failure: First argument should be a data frame (@test_get_all_distances.R#50) 
+  1. ...
+  
+  Error: testthat unit tests failed
+  Execution halted
+* DONE
+Status: 1 ERROR, 1 WARNING

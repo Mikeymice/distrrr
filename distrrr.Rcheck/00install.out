@@ -1,9 +1,12 @@
-* installing *source* package ‘distrrr’ ...
+* installing *source* package 'distrrr' ...
 ** R
-Error in parse(outFile) : 
-  /Users/drowningfish12/Documents/MDS/labs/BLOCK5/DSCI_524_Develope/distrrr/distrrr.Rcheck/00_pkg_src/distrrr/R/test_filter_dis:14:59: unexpected '{'
-13: 
-14: test_that("Output should be a vector containing numerics"){
-                                                              ^
-ERROR: unable to collate and parse R files for package ‘distrrr’
-* removing ‘/Users/drowningfish12/Documents/MDS/labs/BLOCK5/DSCI_524_Develope/distrrr/distrrr.Rcheck/distrrr’
+** byte-compile and prepare package for lazy loading
+** help
+No man pages found in package  'distrrr' 
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (distrrr)
+In R CMD INSTALL

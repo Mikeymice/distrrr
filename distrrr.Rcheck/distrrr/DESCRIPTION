@@ -16,3 +16,4 @@ LazyData: true
 Suggests: testthat
 NeedsCompilation: no
 Packaged: 2019-02-09 06:13:22 UTC; drowningfish12
+Built: R 3.5.1; ; 2019-02-09 06:13:25 UTC; unix

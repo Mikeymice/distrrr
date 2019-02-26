@@ -13,7 +13,6 @@ Description: R package that calculates distance metrics between vectors.
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
-Suggests: testthat
-NeedsCompilation: no
-Packaged: 2019-02-09 16:52:32 UTC; evany
-Built: R 3.5.2; ; 2019-02-09 16:52:41 UTC; windows
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1

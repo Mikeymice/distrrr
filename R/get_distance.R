@@ -10,7 +10,7 @@
 #'
 #' @examples
 #'
-#' get_distance(c(0,0,0), c(1,0,0)) should return 1
+#' get_distance(c(0,0,0), c(1,0,0))
 #'
 get_distance <- function(point1, point2, metric = "euclidean")
 {

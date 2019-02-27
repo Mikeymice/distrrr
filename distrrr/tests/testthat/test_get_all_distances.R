@@ -26,7 +26,7 @@ test_that("Output vector is type numeric",{
       expect_that(dists, is_a("numeric"))
 })
 
-test_that("Distance metrics are correct for different metric inputs",{
+test_that("Distance metrics are correct different metrics distance",{
 
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
       ref_vec <- c(-2,4)
@@ -57,14 +57,14 @@ test_that("First argument should be a vector",{
 })
 
 
-test_that("Point vector should be length k, the number of columns of the input dataframe",{
+test_that("Reference vector should be length k, the number of columns of the input dataframe",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
       ref_vec <- c(1,2,3,4)
 
       expect_error(get_all_distances(ref_vec,df), "ref vector is not the right size")
 })
 
-test_that("dist should be a string and one of 'cosine', 'euclidean' or 'manhattan'",{
+test_that("dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
       ref_vec <- c(1,2,3,4)
 

@@ -1,0 +1,150 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(distrrr)
+> 
+> test_check("distrrr")
+[31m--[39m [31m1. Failure: Output should be a vector con[39m
+class(filter_distances(x, df, threshold = threshold)) == "numeric" isn't true.
+Output is not a vector of numerics
+
+[31m--[39m [31m2. Failure: Output vector is the same len[39m
+dim(df)[1] not equal to length(dists).
+1/1 mismatches
+[1] 3 - 0 == 3
+
+[31m--[39m [31m3. Failure: Distance metrics are correct [39m
+round(dists, 2) not equal to c(5, 4.47, 5).
+Lengths differ: 0 is not 3
+
+[31m--[39m [31m4. Failure: Distance metrics are correct [39m
+round(dists, 2) not equal to c(0.83, 0.32, 0.45).
+Lengths differ: 0 is not 3
+
+[31m--[39m [31m5. Failure: Distance metrics are correct [39m
+round(dists, 2) not equal to c(7, 6, 5).
+Lengths differ: 0 is not 3
+
+[31m--[39m [31m6. Failure: First argument should be a da[39m
+`get_all_distances(c(1, 2, 3), ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m7. Failure: First argument should be a da[39m
+`get_all_distances(2, ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m8. Failure: First argument should be a da[39m
+`get_all_distances(list(A = c(1, 2, 3), B = c(8, 2, 4)), ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m9. Failure: First argument should be a da[39m
+`get_all_distances(c(1, 2, 3), ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m10. Failure: First argument should be a d[39m
+`get_all_distances(2, ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m11. Failure: First argument should be a d[39m
+`get_all_distances(list(A = c(1, 2, 3), B = c(8, 2, 4)), ref_vec)` did not throw an error.
+First Argument not a dataframe
+
+[31m--[39m [31m12. Failure: Second argument should be a [39m
+`get_all_distances(df, "a")` did not throw an error.
+second argument should be a vector
+
+[31m--[39m [31m13. Failure: Second argument should be a [39m
+`get_all_distances(df, df)` did not throw an error.
+second argument should be a vector
+
+[31m--[39m [31m14. Failure: Reference vector should be l[39m
+`get_all_distances(df, ref_vec)` did not throw an error.
+
+[31m--[39m [31m15. Failure: dist_type should be a string[39m
+`get_all_distances(df, ref_vec, dist_type = 1)` did not throw an error.
+
+[31m--[39m [31m16. Failure: dist_type should be a string[39m
+`get_all_distances(df, ref_vec, dist_type = "cityblock")` did not throw an error.
+
+[31m--[39m [31m17. Failure: Output should be a vector co[39m
+class(get_closest(x, df, top_k = k)) == "numeric" isn't true.
+Output is not a vector of numerics
+
+[31m--[39m [31m18. Failure: Output distance should be Eu[39m
+get_distance(x1, x2) not equal to euc(x1, x2).
+1/1 mismatches
+[1] -1 - 3.74 == -4.74
+
+[31m--[39m [31m19. Failure: Output distance should be Eu[39m
+get_distance(x2, x1) not equal to euc(x1, x2).
+1/1 mismatches
+[1] -1 - 3.74 == -4.74
+
+[31m--[39m [31m20. Failure: Output distance should be co[39m
+get_distance(x1, x2, metric = "cosine") not equal to cd(x1, x2).
+1/1 mismatches
+[1] -1 - 0.965 == -1.96
+
+[31m--[39m [31m21. Failure: Output distance should be co[39m
+get_distance(x2, x1, metric = "cosine") not equal to cd(x1, x2).
+1/1 mismatches
+[1] -1 - 0.965 == -1.96
+
+[31m--[39m [31m22. Failure: Output distance should be ma[39m
+get_distance(x1, x2, metric = "manhhantan") not equal to man(x1, x2).
+1/1 mismatches
+[1] -1 - 6 == -7
+
+[31m--[39m [31m23. Failure: Output distance should be ma[39m
+get_distance(x2, x1, metric = "manhhantan") not equal to man(x1, x2).
+1/1 mismatches
+[1] -1 - 6 == -7
+
+[31m--[39m [31m24. Failure: Input should have the same l[39m
+`get_distance(x1, x3)` did not throw an error.
+
+[31m--[39m [31m25. Failure: Input should have the same l[39m
+`get_distance(x3, x1)` did not throw an error.
+
+[31m--[39m [31m26. Failure: Input should have the same l[39m
+`get_distance(x5, x3)` did not throw an error.
+
+[31m--[39m [31m27. Failure: Input should have the same l[39m
+`get_distance(x1, x5)` did not throw an error.
+
+[31m--[39m [31m28. Failure: Input should not be empty ve[39m
+`get_distance(x1, x4)` did not throw an error.
+
+[31m--[39m [31m29. Failure: Input should not be empty ve[39m
+`get_distance(x4, x1)` did not throw an error.
+
+== testthat results  =======================
+OK: 1 SKIPPED: 0 FAILED: 29
+1. Failure: Output should be a vector containing numerics (@test_filter_distances.R#15) 
+2. Failure: Output vector is the same length of the number of rows of input data frame (@test_get_all_distances.R#11) 
+3. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#30) 
+4. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#33) 
+5. Failure: Distance metrics are correct different metrics distance (@test_get_all_distances.R#36) 
+6. Failure: First argument should be a data frame (@test_get_all_distances.R#42) 
+7. Failure: First argument should be a data frame (@test_get_all_distances.R#43) 
+8. Failure: First argument should be a data frame (@test_get_all_distances.R#44) 
+9. Failure: First argument should be a data frame (@test_get_all_distances.R#50) 
+1. ...
+
+Error: testthat unit tests failed
+Execution halted

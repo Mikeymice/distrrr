@@ -42,3 +42,4 @@ test_that("Input parameter top_k should be a non-negative integer"){
 test_that("Input parameter point should be a vector"){
   expect_error(get_closest(7, df, k))
 }
+

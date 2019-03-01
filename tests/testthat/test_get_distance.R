@@ -3,7 +3,7 @@
 #' @author: Mike Yuan
 #'
 #' This script is for testing the funcitonaly and validate input for get_distance.R
-
+context("Test get_distance")
 # dummy input
 x1 <- c(1,1, 1)
 x2 <- c(2,3, 4)
@@ -42,9 +42,9 @@ test_that("Output distance should be cosine", {
   expect_equal(get_distance(x2, x1, metric ="cosine"), cd(x1,x2))
 })
 
-test_that("Output distance should be manhanntan", {
-  expect_equal(get_distance(x1, x2, metric = "manhhantan"), man(x1,x2))
-  expect_equal(get_distance(x2, x1, metric ="manhhantan"), man(x1,x2))
+test_that("Output distance should be manhattan", {
+  expect_equal(get_distance(x1, x2, metric = "manhattan"), man(x1,x2))
+  expect_equal(get_distance(x2, x1, metric ="manhattan"), man(x1,x2))
 })
 
 

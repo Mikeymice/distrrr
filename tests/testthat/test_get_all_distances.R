@@ -41,19 +41,19 @@ test_that("Distance metrics are correct different metrics distance",{
       expect_equal(round(dists,2), c(7,6,5))
 })
 
-test_that("Second argument should be a data frame",{
+test_that("Second argument data should be a data frame",{
       ref_vec <- c(-2,4)
 
-      expect_error(get_all_distances(ref_vec,c(1,2,3)), info = "Second Argument not a dataframe")
-      expect_error(get_all_distances(ref_vec,2), info = "Second Argument not a dataframe")
-      expect_error(get_all_distances(ref_vec,list("A" = c(1,2,3), "B" = c(8,2,4))), info = "Second Argument not a dataframe")
+      expect_error(get_all_distances(ref_vec,c(1,2,3)), info = "Second Argument data not a dataframe")
+      expect_error(get_all_distances(ref_vec,2), info = "Second Argument data not a dataframe")
+      expect_error(get_all_distances(ref_vec,list("A" = c(1,2,3), "B" = c(8,2,4))), info = "Second Argument data not a dataframe")
 })
 
-test_that("First argument should be a numeric vector",{
+test_that("First argument point should be a numeric vector",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
 
-      expect_error(get_all_distances("a",df), info = "first argument should be a vector")
-      expect_error(get_all_distances(df,df), info = "first argument should be a vector")
+      expect_error(get_all_distances("a",df), info = "first argument point should be a numeric vector")
+      expect_error(get_all_distances(df,df), info = "first argument point should be a numeric vector")
 })
 
 

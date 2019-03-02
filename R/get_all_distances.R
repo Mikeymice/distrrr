@@ -19,6 +19,12 @@
 
 get_all_distances <- function(point, data, metric = "euclidean"){
 
+  # raise error if point isn't class numeric
+  if(class(point) != "numeric") stop("first argument point should be a numeric vector")
+
+  # raise error if data isn't a data frame
+  if(class(data) != "data.frame") stop("Second Argument data not a dataframe")
+
   # number of observations and columns in the data frame
   n <- dim(data)[1]
   k <- dim(data)[2]

@@ -15,6 +15,7 @@
 #' @examples
 #' df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
 #' ref_vec <- c(-2,4)
+#' get_all_distances(ref_vec, df, metric = "euclidean")
 #'
 
 get_all_distances <- function(point, data, metric = "euclidean"){

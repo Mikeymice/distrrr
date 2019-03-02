@@ -1,23 +1,57 @@
 
 # Helper functions
 
-# cosine
-cd <- function(a,b){
-  dp <- sum(a*b)
-  amag <- sqrt(sum(a^2))
-  bmag <- sqrt(sum(b^2))
+
+#' cd
+#'
+#' @param point1 vector with numeric values
+#' @param point2 vector with numeric values
+#'
+#' @return float, the distance between point1 and point2 based on the cosine similarity
+#' @export
+#'
+#' @examples
+#'
+#' cd(c(0,0,0), c(1,0,0))
+#'
+cd <- function(point1,point2){
+  dp <- sum(point1*point2)
+  amag <- sqrt(sum(point1^2))
+  bmag <- sqrt(sum(point2^2))
 
   dp/(amag*bmag)
 }
 
-# euclidean
-euc <- function(a,b){
-  sqrt(sum((a-b)^2))
+#' euc
+#'
+#' @param point1 vector with numeric values
+#' @param point2 vector with numeric values
+#'
+#' @return float, the distance between point1 and point2 based on the euclidean
+#' @export
+#'
+#' @examples
+#'
+#' euc(c(0,0,0), c(1,0,0))
+#'
+euc <- function(point1,point2){
+  sqrt(sum((point1-point2)^2))
 }
 
-#manhhantan
-man <- function(a,b){
-  sum(abs(a-b))
+#' man
+#'
+#' @param point1 vector with numeric values
+#' @param point2 vector with numeric values
+#'
+#' @return float, the distance between point1 and point2 based on the manhattan
+#' @export
+#'
+#' @examples
+#'
+#' man(c(0,0,0), c(1,0,0))
+#'
+man <- function(point1,point2){
+  sum(abs(point1-point2))
 }
 
 
@@ -47,7 +81,7 @@ get_distance <- function(point1, point2, metric = "euclidean")
 
 
 
-  # check for numeric element
+  # check for numeric vector first then check for equal length
 
   if(!is.vector(point1, mode="numeric")  || !is.vector(point2, mode="numeric"))
   {
@@ -60,11 +94,6 @@ get_distance <- function(point1, point2, metric = "euclidean")
       stop("Inputs have different length")
     }
   }
-
-
-
-
-  # check for unequal length
 
 
 

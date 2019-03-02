@@ -47,7 +47,8 @@ get_all_distances <- function(point, data, metric = "euclidean"){
   distances <- numeric(n)
 
   for(obs in 1:n){
-    distances[obs] <- get_distance(point, data[obs,], metric)
+    point2 <- as.numeric(as.vector(data[obs,]))
+    distances[obs] <- get_distance(point, point2, metric)
   }
 
   return(distances)

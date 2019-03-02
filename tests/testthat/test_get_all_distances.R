@@ -59,7 +59,7 @@ test_that("First argument point should be a numeric vector",{
 
 test_that("Point should be length k, the number of columns of the input dataframe",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
-      ref_vec <- c(1,2)
+      ref_vec <- c(1,2,3,4)
 
       expect_error(get_all_distances(ref_vec,df), "Point should be length k, the number of columns of the input dataframe")
 })

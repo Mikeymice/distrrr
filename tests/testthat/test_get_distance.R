@@ -10,6 +10,7 @@ x2 <- c(2,3, 4)
 x3 <- c(1,1)
 x4 <- c()
 x5 <- c(1, 3, 4, 5)
+x6 <- 123
 
 # helper cheker function
 
@@ -50,20 +51,31 @@ test_that("Output distance should be manhattan", {
 
 # test for unequal input length
 test_that("Input should have the same length", {
-  expect_error(get_distance(x1, x3), "input length are not equal")
-  expect_error(get_distance(x3, x1), "input length are not equal")
-  expect_error(get_distance(x5, x3), "input length are not equal")
-  expect_error(get_distance(x1, x5), "input length are not equal")
+  expect_error(get_distance(x1, x3), "Inputs have different length")
+  expect_error(get_distance(x3, x1), "Inputs have different length")
+  expect_error(get_distance(x5, x3), "Inputs have different length")
+  expect_error(get_distance(x1, x5), "Inputs have different length")
 
 })
 
-# test for mpty list
-test_that("Input should not be empty vector", {
-  expect_error(get_distance(x1, x4), "input length cannot be 0")
-  expect_error(get_distance(x4, x1), "input length cannnot be 0")
-
+# test for empty list
+test_that("Test for empty vector and NULL", {
+  expect_error(get_distance(x1, c()), "Input cannot be neigher empty vector nor NULL")
+  expect_error(get_distance(c(), x1), "Input cannot be neigher empty vector nor NULL")
 
 })
+
+# test for non-numeric list
+test_that("Test for non-numeric", {
+  expect_error(get_distance(x1, "123"), "Input has to be vector containing numeric elements")
+  expect_error(get_distance("abc", x1), "Input has to be vector containing numeric elements")
+
+})
+
+# test for incorrect metric input
+test_that("Test for incorrect metric",{
+  expect_error(get_distance(x1, x1, metric="coooosine"), "Metric needs to be one of 'euclidean', 'cosine' or 'manhattan'")
+          })
 
 
 

@@ -13,8 +13,9 @@
 #'
 #' @examples
 #'
+#'
 
-get_all_distances <- function(point, data, dist = "euclidean"){
+get_all_distances <- function(point, data, metric = "euclidean"){
 
       return(as.numeric(c()))
 }

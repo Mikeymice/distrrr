@@ -31,13 +31,13 @@ test_that("Distance metrics are correct different metrics distance",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
       ref_vec <- c(-2,4)
 
-      dists <- get_all_distances(ref_vec, df, dist = "euclidean")
+      dists <- get_all_distances(ref_vec, df, metric = "euclidean")
       expect_equal(round(dists,2), c(5,4.47,5))
 
-      dists <- get_all_distances(ref_vec, df, dist = "cosine")
+      dists <- get_all_distances(ref_vec, df, metric = "cosine")
       expect_equal(round(dists,2), c(0.83,0.32,0.45))
 
-      dists <- get_all_distances(ref_vec, df, dist = "manhattan")
+      dists <- get_all_distances(ref_vec, df, metric = "manhattan")
       expect_equal(round(dists,2), c(7,6,5))
 })
 
@@ -68,8 +68,8 @@ test_that("dist_type should be a string and one of 'cosine', 'euclidean' or 'man
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
       ref_vec <- c(1,2,3,4)
 
-      expect_error(get_all_distances(ref_vec,df, dist = 1), "distance metric is not a valid option")
-      expect_error(get_all_distances(ref_vec,df, dist = "cityblock"), "distance metric is not a valid option")
+      expect_error(get_all_distances(ref_vec,df, metric = 1), "distance metric is not a valid option")
+      expect_error(get_all_distances(ref_vec,df, metric = "cityblock"), "distance metric is not a valid option")
 })
 
 

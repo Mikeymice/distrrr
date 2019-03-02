@@ -72,4 +72,9 @@ test_that("dist_type should be a string and one of 'cosine', 'euclidean' or 'man
       expect_error(get_all_distances(ref_vec,df, metric = "cityblock"), "dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'")
 })
 
+test_that("All elements of data should be numeric",{
+      df <- data.frame("A" = c("1","2","3"), "B" = c(8,2,4))
+      ref_vec <- c(1,2)
 
+      expect_error(get_all_distances(ref_vec,df), "All elements of data should be numeric")
+})

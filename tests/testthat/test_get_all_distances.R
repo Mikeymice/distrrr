@@ -2,7 +2,7 @@
 #' Feb 2019
 #' @author: Evan Yathon
 #'
-#' This script is for testing the functionality for get_distance.R
+#' This script is for testing the functionality for get_all_distances.R
 
 library(testthat)
 

@@ -95,6 +95,9 @@ get_distance <- function(point1, point2, metric = "euclidean")
     }
   }
 
+  if(! metric %in% names(function_list) )
+    stop("Metric needs to be one of 'euclidean', 'cosine' or 'manhattan'")
+
 
 
   return(function_list[[metric]](point1, point2)) # dummy result

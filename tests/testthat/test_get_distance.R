@@ -72,5 +72,10 @@ test_that("Test for non-numeric", {
 
 })
 
+# test for incorrect metric input
+test_that("Test for incorrect metric",{
+  expect_error(get_distance(x1, x1, metric="coooosine"), "Metric needs to be one of 'euclidean', 'cosine' or 'manhattan'")
+          })
+
 
 

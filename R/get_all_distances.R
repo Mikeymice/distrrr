@@ -29,6 +29,13 @@ get_all_distances <- function(point, data, metric = "euclidean"){
   n <- dim(data)[1]
   k <- dim(data)[2]
 
+  # raise error if point isn't length k
+  if(length(point) != k) stop("Point should be length k, the number of columns of the input dataframe")
+
+  # raise error if metric isn't correctly specified
+  metrics <- c("euclidean","cosine","manhattan")
+  if(!metric %in% metrics) stop("dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'")
+
   # empty distances vector to fill
   distances <- numeric(n)
 

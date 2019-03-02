@@ -34,3 +34,24 @@ In our package, we will be implementing the distance metric calculations manuall
 |[Scipy's Spatial Distance Functions](https://docs.scipy.org/doc/scipy/reference/spatial.distance.html)|
 |[R Distance Computations](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/dist.html)|
 |[R K Nearest Neighbours](https://cran.r-project.org/web/packages/FNN/index.html)||
+
+
+## Installation
+To install the package, simply run the below in R console:
+
+ `devtools::install_github("UBC-MDS/distrrr")`
+
+Then simply import `distrrr` in your own development. For example:
+```
+>>> library(distrrr)
+> get_distance(c(1,2),c(2,1))
+[1] 1.414214
+```
+
+## Example Usages
+|Function Name|Example Usage(s)|
+|--------|-------|
+|get_distance||
+|get_all_distances|<code>ref_vec <- c(-2,4)</code><br><code>df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))</code><br><code>get_all_distances(ref_vec, df, metric = "euclidean")</code>|
+|filter_distances||
+|get_closest||

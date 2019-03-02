@@ -60,7 +60,7 @@ man <- function(point1,point2){
 #'
 #' @param point1 vector with numeric values
 #' @param point2 vector with numeric values
-#' @param metric defuault "euclidean", "cosine" will return cosine similiarity distnace, and "manhhantan" will return manhhantan distance
+#' @param metric default "euclidean", "cosine" will return cosine similiarity distance, and "manhattan" will return manhattan distance
 #'
 #' @return float, the distance between point1 and point2 based on the metric given
 #' @export

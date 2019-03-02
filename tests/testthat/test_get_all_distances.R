@@ -57,19 +57,19 @@ test_that("First argument point should be a numeric vector",{
 })
 
 
-test_that("Reference vector should be length k, the number of columns of the input dataframe",{
+test_that("Point should be length k, the number of columns of the input dataframe",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
-      ref_vec <- c(1,2,3,4)
+      ref_vec <- c(1,2)
 
-      expect_error(get_all_distances(ref_vec,df), "ref vector is not the right size")
+      expect_error(get_all_distances(ref_vec,df), "Point should be length k, the number of columns of the input dataframe")
 })
 
 test_that("dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
-      ref_vec <- c(1,2,3,4)
+      ref_vec <- c(1,2)
 
-      expect_error(get_all_distances(ref_vec,df, metric = 1), "distance metric is not a valid option")
-      expect_error(get_all_distances(ref_vec,df, metric = "cityblock"), "distance metric is not a valid option")
+      expect_error(get_all_distances(ref_vec,df, metric = 1), "dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'")
+      expect_error(get_all_distances(ref_vec,df, metric = "cityblock"), "dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'")
 })
 
 

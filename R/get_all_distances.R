@@ -37,6 +37,12 @@ get_all_distances <- function(point, data, metric = "euclidean"){
   metrics <- c("euclidean","cosine","manhattan")
   if(!metric %in% metrics) stop("dist_type should be a string and one of 'cosine', 'euclidean' or 'manhattan'")
 
+  # raise error if all elements of data aren't numeric
+  # first extract type of each column in data frame
+  # credit: https://stackoverflow.com/questions/21125222/determine-the-data-types-of-a-data-frames-columns
+  data_col_classes <- unique(sapply(data,class))
+  if(length(data_col_classes) != 1 & data_col_classes[1] != "numeric") stop("All elements of data should be numeric")
+
   # empty distances vector to fill
   distances <- numeric(n)
 

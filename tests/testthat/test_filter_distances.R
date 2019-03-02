@@ -13,7 +13,7 @@ df <- data.frame(x=c(1, 1), y=c(1,2))
 threshold = 0.9
 
 test_that("Output should be a vector containing numbers", {
-  expect_true(class(filter_distances(x, df, threshold))=="numeric")
+  expect_true(class(filter_distances(x, df, threshold))=="integer")
 })
 
 test_that("All numbers in output vector should be non-negative",{

@@ -49,7 +49,7 @@ test_that("Second argument should be a data frame",{
       expect_error(get_all_distances(ref_vec,list("A" = c(1,2,3), "B" = c(8,2,4))), info = "Second Argument not a dataframe")
 })
 
-test_that("First argument should be a vector",{
+test_that("First argument should be a numeric vector",{
       df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
 
       expect_error(get_all_distances("a",df), info = "first argument should be a vector")

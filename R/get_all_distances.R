@@ -9,6 +9,7 @@
 #' @param metric string, default value "euclidean" for euclidean distance, "cosine" will return cosine similiarity distance, and "manhattan" will return manhattan distance
 #'
 #' @return numeric vector of length n
+#'
 #' @export
 #'
 #' @examples
@@ -18,5 +19,16 @@
 
 get_all_distances <- function(point, data, metric = "euclidean"){
 
-      return(as.numeric(c()))
+  # number of observations and columns in the data frame
+  n <- dim(data)[1]
+  k <- dim(data)[2]
+
+  # empty distances vector to fill
+  distances <- numeric(n)
+
+  for(obs in 1:n){
+    distances[obs] <- get_distance(point, data[obs,], metric)
+  }
+
+  return(distances)
 }

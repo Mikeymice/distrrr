@@ -37,12 +37,20 @@ test_that("Input data parameter should be a dataframe",{
   expect_error(get_closest(x, 8, k))
 })
 
+test_that("Input parameter top_k should be a number",{
+  expect_error(get_closest(x, df, "two"))
+})
+
 test_that("Input parameter top_k should be a non-negative integer",{
   expect_error(get_closest(x, df, -2))
 })
 
-test_that("Input parameter point should be a vector",{
-  expect_error(get_closest(7, df, k))
+test_that("Message/warning appears if input parameter top_k is larger than size of data frame",{
+  expect_message(get_closest(x, df, 100))
+})
+
+test_that("Input parameter point should be a vector of numerics",{
+  expect_error(get_closest(c("7"), df, k))
 })
 
 test_that("Input parameter metric should be a character",{

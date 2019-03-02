@@ -15,7 +15,7 @@ euc <- function(a,b){
   sqrt(sum((a-b)^2))
 }
 
-#manhhantan
+#manhattan
 man <- function(a,b){
   sum(abs(a-b))
 }
@@ -26,7 +26,7 @@ man <- function(a,b){
 #'
 #' @param point1 vector with numeric values
 #' @param point2 vector with numeric values
-#' @param metric defuault "euclidean", "cosine" will return cosine similiarity distnace, and "manhhantan" will return manhhantan distance
+#' @param metric default "euclidean", "cosine" will return cosine similiarity distance, and "manhattan" will return manhattan distance
 #'
 #' @return float, the distance between point1 and point2 based on the metric given
 #' @export

@@ -17,6 +17,10 @@
 
 In addition to computing distances, `distrrr` can identify the closest data points to a given point based on a distance threshold, or based on a user-specified number of points.  These functions are designed to be similar to [Scikit Learn's Nearest Neighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors.kneighbors) functionality.
 
+## Test Coverage
+We used the R library [`covr`](https://github.com/r-lib/covr) to track our test coverage for the `distrrr` package. The results of the coverage report show 100% test coverage for each line of function implementation code.
+
+![](/reports/distrrr_test_coverage.png)
 ## Functions
 
 |Function Name|Input|Output|Description|

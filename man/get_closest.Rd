@@ -4,7 +4,7 @@
 \alias{get_closest}
 \title{get_closest}
 \usage{
-get_closest(point, data, top_k, dist = "euclidean")
+get_closest(point, data, top_k, metric = "euclidean")
 }
 \arguments{
 \item{point}{Vector, values defining a single observation to compute distances for}
@@ -19,7 +19,8 @@ get_closest(point, data, top_k, dist = "euclidean")
 Vector, indices of the closest k observations from data
 }
 \description{
-get_closest
+Returns the indices of the top k rows in a dataframe that are closest to
+a given obversation (point) based on a specificed distance metric.
 }
 \examples{
 df <- data.frame(x=c(1, 1), y=c(1,2))

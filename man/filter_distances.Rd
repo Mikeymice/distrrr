@@ -4,7 +4,7 @@
 \alias{filter_distances}
 \title{filter_distances}
 \usage{
-filter_distances(point, data, threshold, dist = "euclidean")
+filter_distances(point, data, threshold, metric = "euclidean")
 }
 \arguments{
 \item{point}{Vector, values defining a single observation to compute distances for}
@@ -13,7 +13,7 @@ filter_distances(point, data, threshold, dist = "euclidean")
 
 \item{threshold}{float, maximum distance of observations to return indices for}
 
-\item{dist}{Char, type of distance metric to use in distance calculations}
+\item{metric}{Char, type of distance metric to use in distance calculations}
 }
 \value{
 Vector, indices of the observations with distance less than `threshold` from `point`

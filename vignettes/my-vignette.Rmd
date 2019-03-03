@@ -1,0 +1,77 @@
+---
+title: "distrrr"
+author: "Carrie Cheung, Evan Yathon, Mike Yuan, Shayne Andrews"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+distrrr is a R package that calculates distances between numeric-based data points or observations. The currently supported distance metrics are:
+
+* [Euclidean Distance](https://en.wikipedia.org/wiki/Euclidean_distance)
+* [Manhattan Distance](https://en.wikipedia.org/wiki/Taxicab_geometry)
+* [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
+
+In addition to computing distances, `distrrr` can identify the closest data points to a given point based on a distance threshold, or based on a user-specified number of points.  These functions are designed to be similar to [Scikit Learn's Nearest Neighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors.kneighbors) functionality.
+
+
+## Functions
+
+`get_distance()`
+
+Given 2 observations each represented by a vector of numeric values, compute and return the distance between the 2 points based on the specified distance metric (e.g. metric="euclidean")
+
+Example Usage:
+
+`get_distance(c(1,2), c(0,1), "manhattan")`
+
+---
+
+`get_all_distances()`
+
+Given a dataframe and an observation represented by a single list of numeric values, compute and return the distances between the single observation and each observation in the dataframe based on the specified distance metric. Will output a vector of distances (as numeric values) with size equal to the number of rows in the dataframe, `n`.
+
+Example Usage:
+```
+x <- c(-2,4)
+df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
+get_all_distances(x, df, metric = "euclidean")
+```
+
+---
+
+`filter_distances()`
+
+Similiar to `get_all_distances` except indices of rows/observations with distances less than the threshold distance will be returned.
+
+Example Usage:
+
+```
+x <- c(1, 1)
+df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
+filter_distances(x, df, threshold=0.9, metric="euclidean")
+```
+
+---
+
+`get_closest()`
+
+Similiar to `get_all_distances` except indices of the top `k` rows/observations with the smallest distances are returned. In the case where there are ties in distances between two or more points, the point with the smaller value will be selected first (e.g. points 5 and 6 both have distance=3 and are tied for kth nearest neighbour, so 5 will be selected over 6).
+
+Example Usage:
+```
+x <- c(1, 1)
+df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))
+get_closest(x, df, top_k=2, "manhattan")
+```
+

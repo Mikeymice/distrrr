@@ -29,6 +29,10 @@ test_that("Input parameter threshold should be a non-negative integer",{
   expect_error(filter_distances(x, df, -5.5))
 })
 
-test_that("Input parameter point should be a vector",{
-  expect_error(filter_distances(10, df, threshold))
+test_that("Input parameter threshold should be an integer",{
+  expect_error(filter_distances(x, df, "five"))
+})
+
+test_that("Input parameter threshold should be a single value",{
+  expect_error(filter_distances(x, df, c(1.1,2.2)))
 })

@@ -13,7 +13,7 @@ df <- data.frame(x=c(1, 1), y=c(1,2))
 threshold = 0.9
 
 test_that("Output should be a vector containing numbers", {
-  expect_true(class(filter_distances(x, df, threshold))=="numeric")
+  expect_true(class(filter_distances(x, df, threshold))=="integer")
 })
 
 test_that("All numbers in output vector should be non-negative",{
@@ -29,5 +29,10 @@ test_that("Input parameter threshold should be a non-negative integer",{
   expect_error(filter_distances(x, df, -5.5))
 })
 
-test_that("Input parameter point should be a vector",{
+test_that("Input parameter threshold should be an integer",{
+  expect_error(filter_distances(x, df, "five"))
+})
+
+test_that("Input parameter threshold should be a single value",{
+  expect_error(filter_distances(x, df, c(1.1,2.2)))
 })

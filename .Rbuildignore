@@ -4,6 +4,6 @@
 ^\.Rproj\.user$
 CONDUCT.md
 CONTRIBUTING.md
-LICENSE.md
 README.txt
 reports
+.travis.yml

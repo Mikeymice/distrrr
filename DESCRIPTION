@@ -10,7 +10,7 @@ Maintainer: The package maintainer <yourself@somewhere.net>
 Description: R package that calculates distance metrics between vectors. 
     Users can find closest distances based either on a threshold distance or 
     specified number of outputs to find vectors that are similar to their input.
-License: Apache License 2.0 + file LICENSE
+License: Apache + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 

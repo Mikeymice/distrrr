@@ -17,10 +17,7 @@ get_all_distances(point, data, metric = "euclidean")
 numeric vector of length n
 }
 \description{
-Created by Evan Yathon on 2019-02-08
-}
-\details{
-Compares an input reference vector to all rows of an input data frame, calculating the specified distance/similarity metric for each row.
+Compares an input reference vector (point) to all rows of an input data frame, calculating the specified distance/similarity metric for each row.
 }
 \examples{
 df <- data.frame("A" = c(1,2,3), "B" = c(8,2,4))

@@ -6,7 +6,7 @@
 #' @param point Vector, values defining a single observation to compute distances for
 #' @param data Dataframe, values of all observations to calculate distances from point
 #' @param top_k Integer, number of closest observations to return indices for
-#' @param dist Char, type of distance metric to use in distance calculations
+#' @param metric Char, type of distance metric to use in distance calculations
 #'
 #' @return Vector, indices of the closest k observations from data
 

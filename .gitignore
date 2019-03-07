@@ -1,5 +1,6 @@
+Meta
+doc
 inst/doc
 .ipynb_checkpoints/
 .DS_Store
 .Rproj.user
-.Rbuildignore

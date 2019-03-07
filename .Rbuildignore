@@ -1,0 +1,9 @@
+^Meta$
+^doc$
+^.*\.Rproj$
+^\.Rproj\.user$
+CONDUCT.md
+CONTRIBUTING.md
+README.txt
+reports
+.travis.yml

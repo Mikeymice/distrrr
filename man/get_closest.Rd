@@ -13,7 +13,7 @@ get_closest(point, data, top_k, metric = "euclidean")
 
 \item{top_k}{Integer, number of closest observations to return indices for}
 
-\item{dist}{Char, type of distance metric to use in distance calculations}
+\item{metric}{Char, type of distance metric to use in distance calculations}
 }
 \value{
 Vector, indices of the closest k observations from data

@@ -48,7 +48,7 @@ In our package, we will be implementing the distance metric calculations manuall
 ## Installation
 To install the package, simply run the below in R console:
 
- `devtools::install_github("UBC-MDS/distrrr")`
+`devtools::install_github("UBC-MDS/distrrr", build_opts = c("--no-resave-data", "--no-manual"))`
 
 Then simply import `distrrr` in your own development. For example:
 ```

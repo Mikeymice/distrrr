@@ -1,4 +1,6 @@
-# DSCI 524 Milestone 1 README
+# distrrr
+
+[![Build Status](https://travis-ci.org/UBC-MDS/distrrr.svg?branch=master)](https://travis-ci.org/UBC-MDS/distrrr)
 
 |Contributors|GitHub Handle|
 |------------|-------------|
